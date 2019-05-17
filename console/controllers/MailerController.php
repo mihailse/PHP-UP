@@ -14,7 +14,7 @@ class MailerController extends \yii\console\Controller
             ->setTo('testphpup1@gmail.com')
             ->setSubject('Проверка отправки почты' . date(DATE_RFC822))
             ->setTextBody('Это проверка отправки сообщения из Yii2')
-            ->setHtmlBody('<b>Это проверка отправки сообщения из Yii2</b>
+            ->setHtmlBody('<b>Это проверка отправки сообщения из Yii2 из приложения</b>
                 </br>')
             ->send();
         var_dump(
