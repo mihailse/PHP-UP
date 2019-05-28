@@ -1,6 +1,6 @@
 <?php
 return [
     'adminEmail' => 'bssat@yandex.ru',
-    'maxNewsInList' => 3,
-    'shortTextLimit' =>20,
+    'maxNewsInList' => 5,
+    'shortTextLimit' =>200,
 ];

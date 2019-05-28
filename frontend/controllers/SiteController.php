@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use frontend\models\ResendVerificationEmailForm;
+use frontend\models\Test;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
@@ -143,6 +144,7 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
+
         return $this->render('about');
     }
 

@@ -65,20 +65,22 @@ return [
         'assetManager' => [
             'bundles' => [
                 'yii\web\JqueryAsset' => [
-                    'js'=>[]
+                    'js' => []
                 ],
                 'yii\web\YiiAsset' => [
-                    'js'=>[]
+                    'js' => []
                 ],
-                'yii\bootstrap\BootstrapPluginAsset' => [
-                    'js'=>[]
+                'yii\bootstrapPluginAsset' => [
+                    'js' => []
                 ],
             ],
-        ]
+        ],
+
     ],
     'params' => $params,
     'aliases' => [
         '@files' => '/var/www/project/frontend/web/files',
         '@photos' => '@files/photos',
+        '@images' => '/files/photos',
     ]
 ];

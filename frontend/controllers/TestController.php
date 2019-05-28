@@ -31,9 +31,7 @@ class TestController extends Controller
         $max = Yii::$app->params['maxNewsInList'];
         $list = Test::getNewsList($max);
         return $this->render('index',
-            ['list' => $list]
-
-        );
+            ['list' => $list]);
     }
 
     public function actionView($id)

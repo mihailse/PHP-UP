@@ -5,6 +5,24 @@
 //    echo Yii::$app->session->getFlash('subscribeStatus');
 //}
 
+$this->title = 'Подпишитесь на новости!';
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => 'Описание статьи'
+]);
+
+$this->registerMetaTag([
+    'name' => 'keywords',
+    'content' => 'Здесь содержатся кейворды'
+]);
+
+$this->params['breadcrumbs'] = [
+    'Test 1',
+    ['label' => 'Test 2', 'url' => '/site/index'],
+    'Test3 ',
+    'Test4 ',
+];
+
 if ($model->hasErrors()) {
     echo '<pre>';
     print_r($model->getErrors());

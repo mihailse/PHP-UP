@@ -1,12 +1,29 @@
 <?php
-    use frontend\assets\GalleryAsset;
+use frontend\assets\GalleryAsset;
 
-    GalleryAsset::register($this);
+//GalleryAsset::register($this);
+
+//echo GalleryAsset::className();
+
+//$assetClass = GalleryAsset::className();
+
+//$this->registerJsFile('@web/js/gallery/scripts.js', ['depends' => [
+//GalleryAsset::class()
+//]]);
+
+//$this->registerJsFile('@web/js/gallery/scripts.js', ['depends' => [
+//    $assetClass,
+//]]);
+
 ?>
+
+
 <h1>Gallery</h1>
 
 <script src="/js/jquery-latest.js" type="text/javascript"></script>
-<script src="/js/gallery/scripts.js" type="text/javascript"></script>
+<script src="/js/isotope/jquery.isotope.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="/css/gallery/style.css" />
 
 <div class="portfolioFilter">
 
@@ -53,3 +70,36 @@
     </div>
 
 </div>
+
+<script type="text/javascript">
+
+    $(window).load(function(){
+        var $container = $('.portfolioContainer');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        $('.portfolioFilter a').click(function(){
+            $('.portfolioFilter .current').removeClass('current');
+            $(this).addClass('current');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    });
+
+</script>
+
